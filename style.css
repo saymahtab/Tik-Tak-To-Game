@@ -83,6 +83,7 @@ h1 {
     .box {
         height: 23vmin;
         width: 23vmin;
+        font-size: 12vmin;
     }
     .reset-button {
         margin-top: 45vmin;
