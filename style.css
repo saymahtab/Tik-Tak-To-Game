@@ -96,3 +96,38 @@ body {
 .hide {
     display: none;
 }
+<<<<<<< HEAD
+=======
+.new-button {
+    padding: 5px 15px;
+    margin-top: 10px;
+    font-size: 13px;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .game-board {
+        height: 35vmin;
+        width: 80vmin;   
+    }
+    .box {
+        height: 23vmin;
+        width: 23vmin;
+        font-size: 12vmin;
+    }
+    .reset-button {
+        margin-top: 45vmin;
+        font-size: 14px;
+        padding: 8px 17px;
+    }
+    .msg-container {
+        margin: 15px;
+        font-size: 12px;
+    }
+}
+>>>>>>> d705c77bf202e804f32bc7b60ec1e320090201d3
