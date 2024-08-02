@@ -108,5 +108,21 @@ body {
     body {
         background-position: center  ;
     }
+    .container {
+        margin-top: -50px;
+    }
+    .game-board {
+        height: 40vh;
+        margin-top: -15px;
+        margin-bottom: 10px;
+    }
+    .box {
+        height: 80px;
+        width: 80px;
+    }
+    .container img {
+        width: 250px;
+        height: 55px;
+    }
 }
 
