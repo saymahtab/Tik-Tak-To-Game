@@ -91,6 +91,7 @@ body {
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .hide {
@@ -116,7 +117,7 @@ body {
         height: 40vh;
         margin-top: -15px;
         margin-bottom: 5px;
-        gap: 0.9rem;
+        gap: 1rem;
     }
     .box {
         height: 80px;

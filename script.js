@@ -110,7 +110,7 @@ const checkWin = (moves) => {
 };
 
 const showWinner = winner => {
-    msgBox.innerText = `🎉 Congratulations: ${winner} is the Winner! 🎉`;
+    msgBox.innerText = `Congratulations: ${winner} is the Winner!`;
     msgBoxCont.classList.remove('hide');
     disableBox();
     winSound.play();
