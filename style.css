@@ -63,33 +63,35 @@ body {
 .reset-button,
 .new-button {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 1.25rem;
-    background-color: #551b03;
-    color: #fff;
+    background-color: #391202;
+    color: rgb(255, 191, 0);
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: 0.3s;
 }
 
 .reset-button:hover,
 .new-button:hover {
-    background-color: #f1903b;
+    transform: scale(1.04);
 }
 .new-button {
     font-size: 15px;
     padding: 5px 15px;
-    margin-top: 7px;
+    margin-top: 5px;
 }
 .msg-container {
     border: none;
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    border: 1px solid #391202;
+    color: yellow;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1.1rem;
 }
 
 .hide {
@@ -99,9 +101,9 @@ body {
     padding: 5px 15px;
     margin-top: 10px;
     font-size: 13px;
-    background-color: #191913;
-    color: #fff;
-    border-radius: 1rem;
+    background-color: #391202;
+    color: rgb(255, 191, 0);
+    border-radius: 5px;
     border: none;
 }
 @media (max-width: 600px) {

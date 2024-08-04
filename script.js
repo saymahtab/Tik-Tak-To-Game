@@ -28,6 +28,7 @@ for (let i = 0; i < 9; i++) {
 
 const boxArray = document.querySelectorAll('.box');
 let flag = true;
+let moves = 0;
 
 boxArray.forEach(box => {
     box.addEventListener('click', () => {
@@ -36,20 +37,11 @@ boxArray.forEach(box => {
             box.innerText = flag ? 'X' : 'O';
             flag = !flag;
             box.disabled = true;
-            checkWin();
-            const isTie = checkTie();
-            if (isTie) {
-                tieSound.play();
-                msgBox.innerText = `No Winner. Play Again`;
-                msgBoxCont.classList.remove('hide');
-            }
+            moves++;
+            checkWin(moves);
         }
     });
 });
-
-const checkTie = () => {
-    return [...boxArray].every(box => box.innerText !== '');
-};
 
 const disableBox = () => {
     boxArray.forEach(box => (box.disabled = true));
@@ -57,6 +49,17 @@ const disableBox = () => {
 
 const enableBox = () => {
     boxArray.forEach(box => (box.disabled = false));
+};
+
+const stopAllSounds = () => {
+    clickSound.pause();
+    winSound.pause();
+    loseSound.pause();
+    tieSound.pause();
+    clickSound.currentTime = 0;
+    winSound.currentTime = 0;
+    loseSound.currentTime = 0;
+    tieSound.currentTime = 0;
 };
 
 newButton.addEventListener('click', () => {
@@ -67,6 +70,8 @@ newButton.addEventListener('click', () => {
         box.classList.remove('winner');
     });
     enableBox();
+    moves = 0;
+    stopAllSounds()
 });
 
 resetButton.addEventListener('click', () => {
@@ -77,9 +82,12 @@ resetButton.addEventListener('click', () => {
         box.classList.remove('winner');
     });
     enableBox();
+    moves = 0;
+    stopAllSounds()
 });
 
-const checkWin = () => {
+const checkWin = (moves) => {
+    let flag = false;
     arr.forEach(combo => {
         let [a, b, c] = combo;
         if (
@@ -91,12 +99,18 @@ const checkWin = () => {
             boxArray[a].classList.add('winner');
             boxArray[b].classList.add('winner');
             boxArray[c].classList.add('winner');
+            flag = true;
         }
     });
+    if (!winnerFound && moves === 9) {
+        tieSound.play();
+        msgBox.innerText = `No Winner. Play Again`;
+        msgBoxCont.classList.remove('hide');
+    }
 };
 
 const showWinner = winner => {
-    msgBox.innerText = `Congratulations: ${winner} is the Winner!`;
+    msgBox.innerText = `🎉 Congratulations: ${winner} is the Winner! 🎉`;
     msgBoxCont.classList.remove('hide');
     disableBox();
     winSound.play();
