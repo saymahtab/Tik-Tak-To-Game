@@ -102,7 +102,7 @@ const checkWin = (moves) => {
             flag = true;
         }
     });
-    if (!winnerFound && moves === 9) {
+    if (!flag && moves === 9) {
         tieSound.play();
         msgBox.innerText = `No Winner. Play Again`;
         msgBoxCont.classList.remove('hide');
