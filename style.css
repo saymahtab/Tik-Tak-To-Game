@@ -116,6 +116,7 @@ body {
         height: 40vh;
         margin-top: -15px;
         margin-bottom: 10px;
+        gap: 0.7rem;
     }
     .box {
         height: 80px;
